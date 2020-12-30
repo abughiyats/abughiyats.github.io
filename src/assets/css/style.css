@@ -84,6 +84,8 @@ nav {
 .nav-container {
   justify-content: space-between;
   height: 70px;
+  padding: 25px 0;
+  box-sizing: border-box;
 }
 
 .container {
@@ -95,7 +97,6 @@ nav {
 .ul-menu {
   justify-content: flex-end;
   list-style: none;
-  padding: 25px 0;
 }
 
 .li-menu {
@@ -103,18 +104,18 @@ nav {
   margin-left: 30px;
 }
 
+#hamburger {
+  text-align: center;
+  height: 50px;
+  box-sizing: border-box;
+}
+
 #ihamburger {
   color: var(--thecalm);
   font-size: 3rem;
-  margin-top: 8px;
+  margin: auto 0;
   cursor: pointer;
   display: none;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: var(--thedarkness);
-}
-
-#brand {
-  padding: 25px 0;
 }
 
 #brand-link {
@@ -145,6 +146,7 @@ section::after {
     "title image"
     "social image";
   grid-template-columns: 2fr 1fr;
+  padding: 5px;
 }
 
 .head-title {
@@ -180,7 +182,7 @@ section::after {
   font-size: 1.2em;
   padding: 15px;
   border-radius: 25px;
-  margin-bottom: 50px;
+  margin-bottom: 7vh;
   display: block;
 }
 
@@ -250,11 +252,11 @@ main {
   margin-bottom: 3vh;
 }
 
-.abaoutme-btn {
+.aboutme-btn {
   margin-top: 3vh;
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: bold;
-  padding: 5px 10px;
+  padding: 10px 12px;
 }
 
 .abaoutme-btn:hover {
@@ -382,6 +384,11 @@ footer a {
 }
 
 @media screen and (max-width: 768px) {
+  .nav-container {
+    height: 50px;
+    padding: 15px 0;
+  }
+
   .title {
     margin-bottom: 0.5vh;
     font-size: 5vmax;
@@ -400,10 +407,7 @@ footer a {
     margin: auto;
     max-width: 85vw;
     font-size: 15px;
-  }
-
-  .abaoutme-btn {
-    font-size: 15px;
+    line-height: 17px;
   }
 
   .project-container {
@@ -413,8 +417,9 @@ footer a {
 
 @media screen and (max-width: 600px) {
   #ihamburger {
-    display: flex;
-    z-index: 1 !important;
+    display: block;
+    margin-top: -10px;
+    font-size: 2.5rem;
   }
 
   .ul-menu {
@@ -473,12 +478,11 @@ footer a {
     margin-top: 0;
   }
   .head-image img {
-    width: 53vh;
+    width: 45vh;
   }
 
-  .title {
-    width: 30vw;
-    margin-top: 1vh;
+  .title:first-child {
+    font-size: 3.6vmax;
   }
 
   .aboutme-tumbnail img {
