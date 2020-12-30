@@ -485,6 +485,10 @@ footer a {
     font-size: 3.6vmax;
   }
 
+  .aboutme-subtitle h2 {
+    font-size: 4vmax;
+  }
+
   .aboutme-tumbnail img {
     max-width: 35vw;
   }
