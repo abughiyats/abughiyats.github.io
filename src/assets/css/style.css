@@ -3,7 +3,7 @@
 
 :root {
   /* font-color */
-  --thedarkness: #191f3f;
+  --thedarkness: #0c0e18;
   --calmblue: #2b9de9;
   --thecalm: #bbcfff;
 
@@ -23,6 +23,7 @@ html {
 
 body {
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 #ihamburger:hover,
@@ -77,7 +78,7 @@ a {
 
 nav {
   width: 100%;
-  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 7px 4px rgba(0, 0, 0, 0.3);
   position: relative;
 }
 
@@ -133,12 +134,7 @@ nav {
 
 header,
 section {
-  padding-top: 17vmin;
-}
-
-section::after {
-  content: "";
-  padding: 5vh;
+  padding: 17vmin 0 12vmin 0;
 }
 
 .header-container {
@@ -146,7 +142,7 @@ section::after {
     "title image"
     "social image";
   grid-template-columns: 2fr 1fr;
-  padding: 5px;
+  padding: 1px;
 }
 
 .head-title {
@@ -170,8 +166,8 @@ section::after {
 
 #cv {
   width: 150px;
+  margin-bottom: 7vh;
 }
-
 .btn {
   text-align: center;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
@@ -182,7 +178,6 @@ section::after {
   font-size: 1.2em;
   padding: 15px;
   border-radius: 25px;
-  margin-bottom: 7vh;
   display: block;
 }
 
@@ -192,7 +187,7 @@ section::after {
   color: var(--darkblue);
 }
 
-.isoc {
+.social-link {
   font-size: 2.5em;
   letter-spacing: 20px;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
@@ -200,6 +195,8 @@ section::after {
 
 .isoc:hover {
   transition: all ease 0.5s !important;
+  -webkit-text-stroke-width: 0.25px;
+  -webkit-text-stroke-color: var(--thedarkness);
   color: var(--calmblue);
 }
 
@@ -208,12 +205,8 @@ section::after {
 }
 
 .head-image img {
-  width: 85vh;
-  margin-right: auto;
-}
-
-main {
   width: 100%;
+  box-sizing: border-box;
 }
 
 .title {
@@ -249,7 +242,7 @@ main {
 }
 
 .aboutme-subtitle h2 {
-  margin-bottom: 3vh;
+  margin-bottom: 2vh;
 }
 
 .aboutme-btn {
@@ -268,7 +261,6 @@ main {
   gap: 3rem;
   grid-template-columns: 1fr 1fr;
   text-align: center;
-  margin-bottom: 10vh;
 }
 .skills-name {
   color: var(--thecalm);
@@ -279,6 +271,7 @@ main {
   margin-right: var(--mb-2);
   color: var(--thecalm);
 }
+
 .skills-box {
   display: flex;
   align-items: center;
@@ -291,18 +284,24 @@ main {
 
 .project-container {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1rem;
+  grid-gap: 2rem;
 }
-.project-img {
+
+.project-wrapper {
   overflow: hidden;
-}
-.project-img img {
   border-radius: 0.5rem;
-  transition: 1s;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+.project-wrapper img {
   cursor: pointer;
   width: 100%;
+  transition: 1s;
+  display: block;
 }
-.project-img img:hover {
+
+.project-wrapper img:hover {
   transform: scale(1.1);
 }
 
@@ -341,10 +340,6 @@ footer a {
     font-size: 1.2em;
     padding: 12px;
   }
-
-  .head-image img {
-    width: 70vh;
-  }
 }
 
 @media screen and (max-width: 990px) {
@@ -353,7 +348,6 @@ footer a {
       "title title"
       "social image";
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 2fr;
   }
 
   .head-title {
@@ -370,12 +364,7 @@ footer a {
   }
 
   .head-image {
-    margin-left: auto;
     margin-top: -2vh;
-  }
-
-  .head-image img {
-    width: 60vh;
   }
 
   .abaoutme-container {
@@ -453,9 +442,12 @@ footer a {
     line-height: 10vh;
   }
 
-  .head-title h1,
-  .head-title h2 {
+  .head-title h1 {
     font-size: 2.5em;
+  }
+
+  .head-title h2 {
+    font-size: 2.2em;
   }
 
   .head-social button {
@@ -477,16 +469,9 @@ footer a {
   .head-image {
     margin-top: 0;
   }
-  .head-image img {
-    width: 45vh;
-  }
-
-  .title:first-child {
-    font-size: 3.6vmax;
-  }
 
   .aboutme-subtitle h2 {
-    font-size: 4vmax;
+    font-size: 3.2vmax;
   }
 
   .aboutme-tumbnail img {
@@ -496,16 +481,5 @@ footer a {
   .skills-container {
     gap: 1rem;
     grid-template-columns: 1fr;
-  }
-
-  .project-container {
-    padding: 0;
-    gap: 0;
-  }
-
-  .project-img img {
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 30px;
   }
 }
