@@ -28,38 +28,40 @@ if(window.matchMedia("(max-width: 600px)")){
   })
 }
 
-
-const sr = ScrollReveal({
+const waterfall = ScrollReveal({
     origin: 'top',
     distance: '80px',
     duration: 2000,
     reset: true
 });
 
+
+
 /*SCROLL HEADER*/
-sr.reveal('.head-title',{}); 
-sr.reveal('#cv',{delay: 200}); 
-sr.reveal('.social-link',{delay: 400}); 
-sr.reveal('.head-image',{ interval: 200}); 
+waterfall.reveal('nav',{}); 
+waterfall.reveal('.head-title',{}); 
+waterfall.reveal('#cv',{delay: 200}); 
+waterfall.reveal('.social-link',{delay: 400}); 
+waterfall.reveal('.head-image',{ interval: 200}); 
 
 /*SCROLL ABOUT*/
-sr.reveal('.title',{}); 
-sr.reveal('.aboutme-tumbnail',{delay: 400}); 
-sr.reveal('.aboutme-subtitle',{delay: 400}); 
+waterfall.reveal('.title',{}); 
+waterfall.reveal('.aboutme-tumbnail',{delay: 400}); 
+waterfall.reveal('.aboutme-subtitle',{delay: 200}); 
+waterfall.reveal('.aboutme-btn',{interval: 200}); 
 
 // /*SCROLL SKILLS*/
-sr.reveal('.title',{}); 
-sr.reveal('.skills-box',{interval: 200}); 
-sr.reveal('.skills__img',{delay: 600});
+waterfall.reveal('.title',{}); 
+waterfall.reveal('.skills-box',{interval: 200}); 
 
 // /*SCROLL PROJECT*/
-sr.reveal('.title',{}); 
-sr.reveal('.project-img',{interval: 200}); 
+waterfall.reveal('.title',{}); 
+waterfall.reveal('.project-wrapper',{interval: 200}); 
 
 // /*SCROLL FOOTER*/
-sr.reveal('footer h1',{}); 
-sr.reveal('footer a',{delay: 400}); 
-sr.reveal('footer h4',{delay: 400}); 
+waterfall.reveal('.content-foot',{}); 
+waterfall.reveal('.fsocial',{interval: 400}); 
+waterfall.reveal('.copyright',{interval: 400}); 
 
 
 
