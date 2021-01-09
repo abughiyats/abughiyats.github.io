@@ -35,37 +35,5 @@ const main = function () {
 
   appBar.clickEvent = hamburgerBar;
 
-  // const waterfall = ScrollReveal({
-  //   origin: "top",
-  //   distance: "80px",
-  //   duration: 2000,
-  //   reset: true,
-  // });
-
-  // /*SCROLL HEADER*/
-  // waterfall.reveal("nav", {});
-  // waterfall.reveal(".head-title", {});
-  // waterfall.reveal("#cv", { delay: 200 });
-  // waterfall.reveal(".social-link", { delay: 400 });
-  // waterfall.reveal(".head-image", { interval: 200 });
-
-  // /*SCROLL ABOUT*/
-  // waterfall.reveal(".title", {});
-  // waterfall.reveal(".aboutme-tumbnail", { delay: 400 });
-  // waterfall.reveal(".aboutme-subtitle", { delay: 200 });
-  // waterfall.reveal(".aboutme-btn", { interval: 200 });
-
-  // // /*SCROLL SKILLS*/
-  // waterfall.reveal(".title", {});
-  // waterfall.reveal(".skills-box", { interval: 200 });
-
-  // // /*SCROLL PROJECT*/
-  // waterfall.reveal(".title", {});
-  // waterfall.reveal(".project-wrapper", { interval: 200 });
-
-  // // /*SCROLL FOOTER*/
-  // waterfall.reveal(".content-foot", {});
-  // waterfall.reveal(".fsocial", { interval: 400 });
-  // waterfall.reveal(".copyright", { interval: 400 });
 };
 export default main;
