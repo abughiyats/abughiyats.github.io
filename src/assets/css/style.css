@@ -15,6 +15,8 @@
   margin: 0;
   padding: 0;
   font-family: var(--thefont);
+  font-weight: normal;
+  box-sizing: border-box;
 }
 
 html {
@@ -153,11 +155,13 @@ section {
 .head-title h1 {
   font-size: 5.5vmax;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  font-weight: 900;
 }
 
 .head-title h2 {
   font-size: 4.5vmax;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  font-weight: 900;
 }
 
 .head-social {
@@ -166,7 +170,7 @@ section {
 }
 
 #cv {
-  width: 150px;
+  width: 180px;
   margin-bottom: 7vh;
 }
 .btn {
@@ -177,7 +181,7 @@ section {
   color: var(--thecalm);
   border: 1px solid var(--calmblue);
   font-size: 1.2em;
-  padding: 15px;
+  padding: 12px 15px;
   border-radius: 25px;
   display: block;
 }
@@ -189,7 +193,7 @@ section {
 }
 
 .head-social a:not(:first-child) {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .social-link {
@@ -240,21 +244,21 @@ section {
 }
 
 .aboutme-subtitle {
-  line-height: 2.6vmax;
-  font-size: 2vw;
+  line-height: 3vmax;
+  font-size: 1.5vw;
   max-width: 60vw;
-  padding: 2.5vmin;
+  padding: 2vmin;
 }
 
 .aboutme-subtitle h2 {
-  margin-bottom: 2vh;
+  margin-bottom: 1vmin;
 }
 
 .aboutme-btn {
   margin-top: 3vh;
   font-size: 1em;
   font-weight: bold;
-  padding: 10px 12px;
+  padding: 1vmin 2vmin;
 }
 
 .aboutme-btn:hover {
@@ -287,27 +291,43 @@ section {
   box-shadow: 0 4px 25px rgba(1, 11, 17, 0.7);
 }
 
-.project-container {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
-}
-
 .project-wrapper {
+  width: 75%;
   overflow: hidden;
   border-radius: 0.5rem;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
-  box-sizing: border-box;
+  height: auto;
+  position: relative;
+  margin: 10vmin auto;
 }
 
 .project-wrapper img {
-  cursor: pointer;
   width: 100%;
-  transition: 1s;
   display: block;
+  max-height: 380px;
+  object-fit: cover;
+  transition: 1s;
 }
 
 .project-wrapper img:hover {
   transform: scale(1.1);
+}
+
+.project-quote {
+  position: absolute;
+  bottom: 0;
+  transition: ease 0.5s !important;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.65);
+  color: var(--thecalm);
+  width: 100%;
+  opacity: 0;
+  color: var(--thecalm);
+  padding: 10px;
+  text-align: center;
+}
+
+.project-wrapper:hover .project-quote {
+  opacity: 1;
 }
 
 footer {
@@ -404,10 +424,6 @@ footer a {
     font-size: 15px;
     line-height: 17px;
   }
-
-  .project-container {
-    padding: 2vmax;
-  }
 }
 
 @media screen and (max-width: 600px) {
@@ -467,7 +483,7 @@ footer a {
   }
 
   #cv {
-    width: 70px;
+    width: 100px;
     padding: 10px;
   }
 
