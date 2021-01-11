@@ -292,12 +292,12 @@ section {
 }
 
 .project-wrapper {
-  width: 75%;
+  width: 85%;
   overflow: hidden;
   border-radius: 0.5rem;
   height: auto;
   position: relative;
-  margin: 10vmin auto;
+  margin: 15vmin auto;
 }
 
 .project-wrapper img {
@@ -395,6 +395,10 @@ footer a {
 
   .head-image {
     margin-top: -2vh;
+  }
+
+  .project-wrapper {
+    margin: 5vmin auto;
   }
 }
 
